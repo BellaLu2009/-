@@ -2,7 +2,15 @@ from typing import List
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        return 0
+        only_nums = []
+        dic_1={}
+        for a in nums:
+            dic_1[a]=0
+        print(dic_1)
+        for a in dic_1:
+            only_nums.append(a)
+            return only_nums
+    print(len(only_nums)）
 
 if __name__ == '__main__':
     '''给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的相对顺序应该保持 一致 。然后返回 nums 中唯一元素的个数。
