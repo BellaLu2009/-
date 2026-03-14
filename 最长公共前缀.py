@@ -40,7 +40,7 @@ if __name__ == '__main__':
 解释：输入不存在公共前缀。'''
     solution = Solution()
 
-
+    a = list(dict.keys())
 
 
 

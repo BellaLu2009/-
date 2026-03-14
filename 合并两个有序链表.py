@@ -8,6 +8,20 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        list3 = list1 + list2
+        for i in range (len(list3)):
+            min = list3[i]
+            minIndex = i
+            for j in range(i + 1, len(list3)):
+                if list3[j] < min:
+                    min = list3[j]
+                    minIndex = j
+            list3[minIndex] = list3[i]
+            list3[i] = min
+        for i in range(len(list3)):
+            print(list3[i], " ", end="")
+
+
         return None
 
 if __name__ == '__main__':
@@ -28,9 +42,9 @@ if __name__ == '__main__':
     # 构造测试用例
     l1 = ListNode(1, ListNode(2, ListNode(4)))
     l2 = ListNode(1, ListNode(3, ListNode(4)))
-    
+
     result = solution.mergeTwoLists(l1, l2)
-    
+
     # 简单的打印验证
     current = result
     output = []
