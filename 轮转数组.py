@@ -33,6 +33,20 @@ s = '''给定一个整数数组 nums，将数组中的元素向右轮转 k 个�
 
 class Solution:
     def rotate(self, nums: list[int], k: int) -> None:
+        nums_1 = []
+        n=len(nums)
+        if k>len(nums):
+            k %= len(nums)
+        if k==0:
+            nums_1=nums_1
+        index=n-k
+        for i in range(n):
+            nums_1.append(nums[index])
+            n += 1
+        print(nums_1)
+        return (nums_1)
+
+
         """
         Do not return anything, modify nums in-place instead.
         """
