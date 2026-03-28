@@ -1,0 +1,11 @@
+OrderID,Product,Category,Price,Quantity,OrderDate,City
+1,Laptop,Electronics,1200,1,2023-01-15,Beijing
+2,Mouse,Electronics,25,2,2023-01-17,Shanghai
+3,T-shirt,Apparel,40,3,2023-01-18,Beijing
+4,Keyboard,Electronics,75,1,2023-01-20,Guangzhou
+5,Jeans,Apparel,90,1,2023-01-22,Shanghai
+6,Monitor,Electronics,300,2,2023-01-25,Beijing
+7,Socks,Apparel,10,5,2023-01-28,
+8,Laptop,Electronics,1250,1,2023-02-01,Shanghai
+9,Mouse,Electronics,27,1,2023-02-03,Guangzhou
+10,Jacket,Apparel,150,1,2023-02-05,Beijing

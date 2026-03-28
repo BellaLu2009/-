@@ -49,7 +49,8 @@ class Solution:
         for i in range(k):
             nums.insert(0, nums[-1])
             nums.pop(-1)
-        return nums
+        # return nums
+
 
         """
         Do not return anything, modify nums in-place instead.
@@ -63,6 +64,7 @@ if __name__ == '__main__':
     nums1 = [1, 2, 3, 4, 5, 6, 7]
     k1 = 3
     solution.rotate(nums1, k1)
+    print(nums1)
     assert nums1 == [5, 6, 7, 1, 2, 3, 4]
 
     # Test Case 2
