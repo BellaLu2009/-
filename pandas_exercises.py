@@ -1,4 +1,5 @@
 import pandas as pd
+from distributed import Nanny
 
 # 欢迎来到 Pandas 练习！
 # 在这个文件中，我们为你准备了三个挑战，难度从易到难。
@@ -20,6 +21,11 @@ import pandas as pd
 
 print("--- 挑战 1 ---")
 # 在下面编写你的代码
+sales_df = pd.read_csv("sales.csv")
+# print(sales_df)
+# print(sales_df['Price'].sum())
+print(sales_df['Quantity'].mean())
+print(sales_df.info())
 
 
 print("\\n" + "="*30 + "\\n")
@@ -36,6 +42,9 @@ print("\\n" + "="*30 + "\\n")
 
 print("--- 挑战 2 ---")
 # 在下面编写你的代码
+print(sales_df['City'])
+new=sales_df.fillna(value={'City':'Unknown'})
+print(new)
 
 
 print("\\n" + "="*30 + "\\n")
