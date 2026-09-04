@@ -20,7 +20,20 @@ from distributed import Nanny
 # 4. 打印出 `sales_df` 的基本信息，包括每列的数据类型和非空值数量。
 
 print("--- 挑战 1 ---")
-# 在下面编写你的代码
+# 1. 加载 sales.csv
+sales_df = pd.read_csv('sales.csv')
+
+# 2. 计算 Price 列的总销售额
+total_sales = sales_df['Price'].sum()
+print(f"总销售额: {total_sales}")
+
+# 3. 计算 Quantity 列的平均值
+avg_quantity = sales_df['Quantity'].mean()
+print(f"平均销售量: {avg_quantity}")
+
+# 4. 打印 sales_df 的基本信息
+print("\n数据框信息:")
+print(sales_df.info())
 sales_df = pd.read_csv("sales.csv")
 # print(sales_df)
 # print(sales_df['Price'].sum())
@@ -41,7 +54,17 @@ print("\\n" + "="*30 + "\\n")
 # 3. 打印出每个类别的总销售额。
 
 print("--- 挑战 2 ---")
-# 在下面编写你的代码
+# 1. 填充 City 列的缺失值为 'Unknown'
+sales_df['City'].fillna('Unknown', inplace=True)
+print("City 列缺失值已填充为 'Unknown'")
+
+# 2. 创建 TotalSale 列并按 Category 分组
+sales_df['TotalSale'] = sales_df['Price'] * sales_df['Quantity']
+
+# 3. 按 Category 分组，计算每个类别的总销售额
+category_sales = sales_df.groupby('Category')['TotalSale'].sum()
+print("\n每个类别的总销售额:")
+print(category_sales)
 print(sales_df['City'])
 new=sales_df.fillna(value={'City':'Unknown'})
 print(new)
@@ -60,7 +83,22 @@ print("\\n" + "="*30 + "\\n")
 # 4. 找出在哪个城市（'City'）产生的销售订单数量最多，并打印出来。
 
 print("--- 挑战 3 ---")
-# 在下面编写你的代码
+# 1. 加载 employees.csv
+employees_df = pd.read_csv('employees.csv')
+
+# 2. 合并 sales_df 和 employees_df，以 City 作为关联键
+merged_df = pd.merge(sales_df, employees_df, left_on='City', right_on='City', how='left')
+
+# 3. 计算每个部门的总销售额
+department_sales = merged_df.groupby('Department')['TotalSale'].sum()
+print("每个部门的总销售额:")
+print(department_sales)
+
+# 4. 找出哪个城市的销售订单数量最多
+city_order_count = sales_df['City'].value_counts()
+top_city = city_order_count.idxmax()
+top_count = city_order_count.max()
+print(f"\n销售订单最多的城市: {top_city}，订单数量: {top_count}")
 
 
 print("\\n" + "="*30 + "\\n")

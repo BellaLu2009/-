@@ -1,0 +1,11 @@
+ProductID,ProductName,Category,Price,Stock,Supplier
+1001,Dell XPS 15,Laptop,1299.99,15,TechCorp
+1002,HP Pavilion,Laptop,899.99,22,TechCorp
+1003,MacBook Pro,Laptop,1999.99,8,AppleInc
+1004,Logitech MX Master,Mouse,99.99,50,PeripheralCo
+1005,Razer DeathAdder,Mouse,69.99,45,PeripheralCo
+1006,Mechanical Keyboard,Keyboard,149.99,30,PeripheralCo
+1007,Corsair K95,Keyboard,199.99,18,PeripheralCo
+1008,Dell U2723DE,Monitor,399.99,12,DisplayCorp
+1009,LG 27UP550,Monitor,449.99,10,DisplayCorp
+1010,Samsung 49 Inch,Monitor,799.99,5,DisplayCorp

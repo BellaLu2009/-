@@ -1,0 +1,13 @@
+TransactionID,CustomerID,CustomerName,OrderDate,Amount,PaymentMethod,Status
+T001,C001,Alice Johnson,2023-01-05,1200,Credit Card,Completed
+T002,C002,Bob Smith,2023-01-08,2500,Online Payment,Completed
+T003,C003,Charlie Brown,2023-01-10,800,Credit Card,Pending
+T004,C001,Alice Johnson,2023-01-15,450,Debit Card,Completed
+T005,C004,David Lee,2023-01-18,1800,Credit Card,Completed
+T006,C002,Bob Smith,2023-01-20,950,Online Payment,Failed
+T007,C005,Eve Chen,2023-01-22,3200,Credit Card,Completed
+T008,C003,Charlie Brown,2023-01-25,600,Online Payment,Completed
+T009,C001,Alice Johnson,2023-01-28,700,Debit Card,Completed
+T010,C004,David Lee,2023-02-01,2100,Credit Card,Pending
+T011,C005,Eve Chen,2023-02-03,1500,Online Payment,Completed
+T012,C002,Bob Smith,2023-02-05,2200,Credit Card,Completed
